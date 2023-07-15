@@ -1,0 +1,161 @@
+index.html is named because the server automatically detects it as a home page without the indication of programmer.
+! is used to open emmet abbreviation which is a tool which helps in providing template codes
+! provides boilerplate code which is a necessity in almost every website's structure
+HTML tag is a container for a website's content or other HTML tags
+<p> </p> is a paragraph tag which is used for writing paragraphs
+the lines written between this tag is called content 
+content+tag=element
+browser is used to render html document to webpage
+<!DOCTYPE html> is used to define the type of page which is html in this case and its version is html5
+<html> root of an html document it is the parent tag of <head> and <body> tag
+<head> tag is used to give information to code without displaying it [metadata (data about data)]
+<body> tag contains all data rendered by the browser
+viewport is used to indicate that the page should be responsive
+<title> is used to give title to webpage
+hovering over any tag will give you the MDN link which is a guide which contains html documentation
+<br> (break line) tag has no closing tag and its an empty tag as it do not accept any other attribute in its tag
+VIEW PAGE COURCE CAN BE used to view code of our webpage by right clicking and selecting VIEW PAGE SOURCE
+Comment is a part of our file which is not implemented and is not a part of code <!-- This is comment --> (used for fellow devs to understand code easily)
+Comment is a part of our code which is not parsed/rendered by the browser
+HTML is not case sensitive <head>==<HEAD> <body>==<BODY> etc
+36:37 Level 1 of video 
+Attributes are used to add more information to the tags <html lang="en"> where lang="en" is the attribute
+Heading tag is used to display headings in HTML h1-h6 where h1 is most important (bigger font) and h6 is least important
+------SHORTCUT ctrl+forward slash when pressed on a selected line will comment out the whole selected line---------------------------
+Headings should not be used for font size rather than they should be used to indicate the importance of text
+
+------SHORTCUT settings in bottom left then go to command pallete and then click on toggle word wrap to get rid of horizontal scrolling for larger line------
+Anchor tag is used to add links to pages <a href="https://google.com> Google </a>
+In anchor tag we use two types of links, one is the link of other website which is called absolute link 
+eg: www.facebook.com
+The other type of link which is our own website's page is called relative link eg: /homepage.html
+In achor tag we use the attribute target="_main" in order to open another page instead of redirecting on same tab
+48:09
+image tag is used to add images to webpage <img src="/image.png" alt="Random Image">
+alt is used to give alternative name to image when due to slow internet or any other reason the image doesn't load
+image tag uses both relative and absolute links
+height=" "  attribute is used to adjust height of images in img tag 
+width=" "  attribute is used to adjust width of images in img tag  
+It is advisable to adjust only one attribute of any image in order to keep the aspect ratio correct
+bold italic and underline tag <b> content </b> <i> content </i> <u> content </u> is used to highlight content (text)
+big and small tag is used to display big and small text on your webpage <big> </big> <small> </small>
+<hr> tag is used to display a horizontal ruler(line),used to separate content 
+subscript and superscript tag <sub> </sub> <sup> </sup> is used to separate content 
+pre tag is used to display text as it is (without ignoring spaces and next line) <pre> </pre> it is used in place of <p> </p> tag to count spaces line breaks 
+--------SHORTCUT---------- Lorem is written to add sample text (it is also an emmet)
+1:03:25
+Page Layout techniques
+There are two types of tags:
+1.Semantic Tags
+2.Non Semantic Tags
+We use semantic tags for page layout e.g: <header> <footer> <main>.The benefit of using semantic tags is to make the code structured/readable.
+Use of semantic tags (vanilla html) helps in ranking of page (SEO optimization).
+Non Semantic Tag's definition is not clear by its name for e.g: <div> <span>
+------------------------------------------------------------INSIDE MAIN TAG <main>--------------------------------------------------------
+We use three tags:
+<section> tag is used for a section for your page
+<article> tag is used for an article for your page
+<aside> tag is used for content aside main content (ads) SEO does not detect aside tag as the conent inside this tag is an ad
+PUTTING A LINK INSIDE AN IMAGE (CLICKABLE IMAGE)
+For e.g: <a href="https://www.facebook.com/" target="_main"> <img src="https://upload.wikimedia.org/wiksvg.png" height="100" alt="Fb"> </a>
+-------------------------------------------DIV Tag------------------------------------
+<div> tag is a container used for other html elements,by default the height of div is 0 when it contains no element
+Block element (takes full width) Whole screen's width is taken by them
+INLINE elements takes the space which is required by them working in an efficient manner.
+<div style="background-color: red;"> <p> Hello World </p></div> (DIV is a block element)
+Div is helpful when we have to make changes in a lot of elements collectivley 
+------------------------------------------SPAN TAG--------------------------------------
+<span> tag is used as a container for other html tags
+<span> tag is an inline element which takes width as per size
+<span> BYE </span> 
+1:25:00
+List in html are used to represent real life list data
+There are two types of lists ordered and unordered
+1. Ordered list (data will be represented in bullet points. <ul> </ul>
+2. Unordered list (data will be represented in numbered list. for e.g: 1,2,3 a,b,c i,ii,iii  <ol> </ol>
+<ul> 
+<li>  Ali </li>
+    <ul> 
+        <li> Grade: A </li>
+         <li> Section: G </li>
+    </ul>
+<li> Maaz </li>
+    <ul> 
+      <li> Grade: B </li>
+      <li> Section: H </li>
+      </ul>
+</ul>
+The above method is for creating unordered list and its sublists
+<ol> 
+<li>  Ali </li>
+    <ul> 
+        <li> Grade: A </li>
+         <li> Section: G </li>
+    </ul>
+<li> Maaz </li>
+    <ul> 
+      <li> Grade: B </li>
+      <li> Section: H </li>
+      </ul>
+</ol>
+The above method is for creating ordered list and its sublists
+---------------------------Tables in HTMl--------------------------
+Tables are used to represent real life tabular data in html webpage
+<tr>  is used to display table row
+<td>  is used to display table data
+<th>   is used to display table header
+basic format:
+<table>
+        <thead>
+        <caption> Student Data </caption>
+        <tr> 
+        <th> Name</th>
+        <th> Roll no</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td> Jawwad</td>
+          <td> 19K-0190</td>
+        </tr>
+      </tbody>
+       </table>
+1:30:05
+<caption> gives information regarding table
+<caption> Student Data </caption>
+<thead> tag to wrap table head 
+<tbody> tag  to wrap table body
+Both <thead> and <tbody> gives no changes in appearance of webpage
+They are used to indicate the browser about type of content they contain 
+Colspan attribute is used to merge two or more columns when the name of header appears between two or more columns
+<th colspan="2"> NAME OF STUDENT </th>
+
+-----------------------------------HTML FORMS-----------------------------
+<form action="/action.php"> 
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <label for="101">
+        <input type="radio" name="class" value="classXI" id="101"> ClassXI
+        </label>
+        <label for="102">
+        <input type="radio" name="class" value="classXII" id="102"> ClassXII
+        </label>
+        </form>
+the type password is used for password fields and radio is used for selecting only one option from multiple options in a button 
+and the name attribute is the variable's name and the value is assigned by the value attribute.After the closing of tag,ClassXI and XII is written to print button name
+
+Labels are used to extend the clickable area of control elements,like buttons.
+1:47:21
+
+
+
+
+
+
+
+
+
+
+
+
+
