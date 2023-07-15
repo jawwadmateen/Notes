@@ -1,0 +1,224 @@
+*React JS is component based where we create components which we can re-use in different websites.
+
+*Write Once Use Everywhere Principle is implemented.
+
+* npx create-react-app my-app (this command is used in terminal to create a basic react app or we can say setup a react app where "my-app" is the name of app)
+
+* React is not a framework but it is a library but people refer it as a framework as its comparable to frameworks like Angular.js in terms of functionality.
+
+* npx create-react-app . is used to create a react app in the current folder in which vscode is open.
+
+* All modules required by the react app is in the node_modules folder.
+
+* gitignore contain the detail of things which should not be pushed.
+
+* package.json contain the details of packages which are in node_modules folder.
+
+* If you have to reinstall packages (node_modules) then you need package.json and package-lock.json files.
+
+* src folder contain all of your react components.
+
+* All of the rendering is done in index.html page and with the help of JS <div id="root"> </div> will be populated.
+
+* index.js is the entry point.
+
+* npm start command is used to serve the React app.
+
+* To create a production build,use  npm run build
+
+* There are two types of component in react js, class based component and function based component.
+
+* in public folder, index.html is the most important file.
+
+* Function Based component is the new trend.
+
+* npx create-react-app uses function based component.
+
+function app()
+{
+return (JSX);
+}
+
+
+* JSX is a syntax extension of JS through which we can write HTML and can add JS by use of curly brackets.
+
+* React prefer CamelCase 
+
+* JSX fragment <> </> lets you return multiple elements.By default you can only return one element in JSX
+
+* You can use JS variables in JS by use of {name} in JSX
+
+* Self Closing tags are used in JSX  for e.g: <img src="" alt="" />
+
+#4 22;32
+
+* Babel compiles JSX down to react.createElement() calls.
+
+* React JS is used for creating single page applications where only one page is dynamically updated through change of components which is not the case in multi-page applications.
+
+* In multipage application when client sends a request to the server for a particular page then in response the server sends corresponding HTML,CSS,JS of that page.
+
+* In single page application when client sends a request to the server for a particular page for e.g( codewithharry.com/about) the server responds with HTML,CSS,JS of all the other pages.
+
+* Then JS takes over and JS is responsible for navigation of pages at client side through apis.
+
+*We can save a lot of bandwidth using single page application and user's data also.
+
+*It reduces the load on server and it is helpful in cases where your website has millions of users.
+
+* Then there will no need to reload the page and send request for specific page again and again to the server.
+
+*node_modules folder contain all the packages required by react application to develop.
+
+*npm install command is used to install node_modules folder with the help package.json and package-lock.json file.
+
+* node_modules folder is added in gitignore to make sure that we dont send node_modules folder to anyone.
+
+*Public folder contains all the files which are publicly available when you will build the app.
+
+*Don't put passwords and confidential files in this folder.
+
+                                                   --------------Tutorial 5 completed----------------------
+
+*module1.mjs where .mjs indicates ES6 module files.
+
+code snippet example
+
+file1.mjs
+
+export function func1()
+{
+console.log("hi")
+}
+export function func2()
+{
+console.log("hello")
+}
+
+const c="Aslam"
+export default c;
+
+file2.mjs
+import cd from "./file1.mjs"
+import {func1,func2} from "./file1.mjs"
+console.log(cd) //output will be Aslam as its by default export 
+func1();
+
+
+
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+* type rfc for react function based component
+
+*props is short form of properties.
+
+* whenever we want to create a custom component and we want to pass some arguments we pass it through props.
+
+* When there are some variables in prop which are user-defined then we use props.
+
+* Props are Read-Only and you cannot change props in your function
+
+* You can send number through props like this <NavBar title={3} />
+
+*PropTypes are used to define datatype of props sent to the component.
+
+
+* At the end of component like this:
+ NavBar.propTypes={
+  title:PropTypes.string,
+  AboutText:PropTypes.string,
+  HomeText:PropTypes.string
+}
+
+
+* first import PropTypes from 'prop-types';  //in component file
+
+
+*DefaultProps are used to set prop value if the values are not provided at the time of calling the component in app.js
+
+* At the end of component like this:
+
+NavBar.defaultProps={
+  title:"Set title here",
+  AboutText:"Set about text",
+  HomeText:"Set Home text"
+}
+
+#6 22:25
+#6 completed
+
+export default function TextForm(props) {
+    const [text,SetText]=useState('Enter Text Here');
+    const HandleUpClick=()=>
+    {
+        
+        let newtext=text.toUpperCase()
+        SetText(newtext);
+    }
+    const HandleOnChange=(event)=>
+    {
+        
+        SetText(event.target.value)
+
+    }
+  return (
+    <div>
+     
+<div className="container my-3">
+    <h1>{props.heading}</h1>
+  
+  <textarea className="form-control" value={text} onChange={HandleOnChange} id="MyBox" rows="10"></textarea>
+  <button className="btn btn-primary" onClick={HandleUpClick}>Convert To UpperCase </button>
+</div>
+    </div>
+  )
+}
+
+
+#7 completed useState hook
+#8 completed Adding more logic to textUtils.
+#9 completed remove non-numeric characters from string functionality added to  TextUtils webapp.
+#10 4:00
+#10 completed dark mode implemented
+#11 Not Relevent Shoutouts + Exercise Solution implemented
+#12 irrelevant improving dark mode boring :p
+
+
+*You can only use hooks inside a function based component and not a class based component.
+
+* hooks cannot be nested inside anything.
+
+const [text,SetText]=useState("Hello World);
+
+Where text is the state variable and SetText is the function which is used to update the state variable.
+Destructuring is used here
+
+useEffect(()=>
+{
+console.log("hello")
+},text);
+
+UseEffect Done
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
