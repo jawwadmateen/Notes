@@ -1,0 +1,895 @@
+------FOLDER Structure-----------------------------
+
+.idea folder is basically created by intellij so ignore it
+.src folder contains java package (if there is no package then you will have the main class by default in .src folder)
+
+A package is basically a collection of classes
+
+A class consists of a collection of methods
+
+System.out.println("hello world"); is used to print values in Java
+System.out.println("hello world 1");
+output:
+
+hello world
+hello world 1
+
+If you print using 
+
+System.out.print("Hello world");
+System.out.print("Hello world11");
+
+then output will be:
+
+Hello world Hello world11     (there will be no skipping to the next line)
+
+A class is basically a blueprint which contains methods which we use to run our code.
+
+The name of a class is also our program's name.
+
+A class is a template from which we can create objects. (for e.g: You went for an interview in a company where you fill a form and that form has name,phone no field and after filling that form that particular version of form becomes an object such as Jawwad mateen's form.
+
+public class Main {
+    public static void main(String[] args) {
+        System.out.println("hello world");
+        }
+    }
+
+Static keyword tells us that particular method is a class method and not an object method.
+
+Void means function does not return anything.
+
+
+The flow of your program starts from the main method
+
+String[] args (these are the parameters)
+
+different types of variable declarations
+
+int a=13;
+float b=13.44f;
+String c="Hi World";
+boolean isAdult=false;
+double d1=13.5544544;
+char f1='A';
+
+
+
+Write sout and press tab to write System.out.println(); in intellij IDE
+
+you can declare multiple variables in the same line like this:
+
+int x=10,y=11,z=12;
+
+Java is case sensitive langauge which means Jawwad and jawwad are two different variables altogether.
+
+----------------------------PRIMITIVE AND NON-PRIMITIVE (Reference) DATATYPES------------------------------------------
+
+Primitive datatypes are datatypes in java which has a fixed size and you cannot store data more than the specified size
+
+Primitive DataTypes- Byte(1 byte),short(2),int(4 bytes),long (8 bytes),float(4 bytes),double(8 bytes),char(2 bytes),boolean (1 bit)
+
+Non-Primitive or Reference DataType- (non primitive datatypes are the ones which programmer makes but here the special case is String which is also a non-primitive datatype)
+You can run method in non primitive datatype like:
+String a1="aaa";
+a1.concat(),a1.contains() etc.
+
+Garbage collection and memory management is automatic in java.
+
+------------------------------------OPERATORS IN JAVA----------------------------------------
+
+Operand   Operator    Operand      Result
+ 4          +           7       =  11 
+
+
+Types of Operators in Java  (AALC) 
+
+Arithmetic operators
+Assignment operators
+Logical operators
+comparison operators
+
+press ctrl+d to replicate the line
+
+you can directly add the values in print statement like this:
+int num1=11,num2=14;
+System.out.println(num1+num2);
+output: 25
+
+System.out.println(num1+num2);
+System.out.println(num1-num2);
+System.out.println(num1*num2);
+System.out.println(num1/num2);  (the output of division will be 0 if you will divide two integer values and if any one value is in float then you will get answer in float for eg(5.66).
+System.out.println(num1%num2);
+System.out.println(num1++);  post increment operator (it works as it will print the value of num1 as 11 and then increment it making it 12)
+System.out.println(num1--);  post decrement operator (it works as it will print the value of num1 as 11 and then decrement it making it 10)
+System.out.println(++num1);  pre increment operator (it works as it will increment the value of num1 as 12 and then it will print making it 12)
+System.out.println(--num1);  pre decrement operator (it work as it will decrement the value of num1 as 10 and then it will print making it 10)
+
+
+Java did method overloading for println() as we have different println() for 
+println(int x)
+println(char x)
+println(boolean x) etc...
+
+= is an assignment operator 
++= is an addition assignment operator 
+and other more....
+
+
+----------------------------------------Comparison Operators-------------------------------------------------------------------------------------------
+
+       ==  checks for equality of two values
+       !=  checks it two values are not equal
+       <
+       >
+       <=
+       >=
+
+---------------------------------------Logical Operators-------------------------------------------------
+
+&& Logical AND operator 
+|| logical OR operator
+! logical NOT operator
+
+
+--------------------------------------Taking User Input---------------------------------------------
+
+Scanner class is used to take input in java
+
+
+Scanner scan= new Scanner(System.in);
+        String str1=scan.nextLine();
+        System.out.println(str1);
+
+Scanner class's new object scan is created where System.in means we have take input from keyboard
+
+Then you store your input in a variable which is string str1 in this case and scan.nextline() is used to scan the whole string and not avoid after any whitespace
+
+and then you print your string using System.out.println(str1);
+
+
+ System.out.println("Enter your number");
+        Scanner scan=new Scanner(System.in);                              //For Integer
+        int input=scan.nextInt();
+        System.out.println(input);
+
+-----------------------------------------------------------------------------String Methods--------------------------------------------------------------------------------------
+
+String Concatenation-------------------------------------
+
+System.out.println("Enter your number");
+        Scanner scan=new Scanner(System.in);
+        int input=scan.nextInt();
+        System.out.println(input);
+        System.out.println(input + " is my " + "lucky number");  
+
+
+String Length method (for finding number of characters in a string)---------------------------
+
+String name="Jawwad";
+System.out.println(name.length());
+
+---------------------------------------------------------Other Methods-------------------------------------------------------
+System.out.println(name11.toUpperCase());
+System.out.println(name11.toLowerCase());
+
+-------------------------------------------------------------Escape Sequence Characters------------------------------------------
+
+System.out.println("Hello World from FAST\"23");
+
+
+System.out.println("Hello World from FAST\\ 23");    OUTPUT: Hello World from FAST\ 23
+
+System.out.println("Hello World from FAST\n");       
+
+Learn more by googling about escape sequence characters
+
+----------------------------------------------------------------------.contains("substring to find occurence of")-------------------------------------------------
+
+ String aa="haresh";
+ System.out.println(aa.contains("res"));   //prints true res is present in string aa
+ System.out.println(aa.charAt(2));  output: r (as on  index  2 of string aa we have character r)
+ System.out.println(aa.endsWith("esh"));  output: true as the string aa ends with "esh"
+
+System.out.println(aa.indexOf("re"));  output: 2 as substring "re" starts from index 2 and this method will return -1 when it will not find the substring 
+
+Search for more string methods on internet by googling Java String methods
+
+System.out.println(Math.max(num1,num2)); // prints max num
+System.out.println(Math.min(num1,num2));  //prints min num
+
+1:25:02
+
+
+System.out.println(Math.sqrt(num1));  //prints the square root of the number
+System.out.println(Math.abs(num3));  //turns negative number to positive number and if number is already positive then it prints it as it is (-33 to 33,33 to 33)
+System.out.println(Math.random());   //returns number between 0 and 1 for e.g(0.55,0.67)
+System.out.println(4+(8-4)*Math.random());  // for printing a number between 4 and 8 
+
+
+----------------------------------------------------------------------------------If-else conditionals -------------------------------------------
+
+int rank=20;
+
+        if(rank==10)
+        {
+            System.out.println("rank low");
+        }
+        else if(rank==20)
+        {
+            System.out.println("rank normal");
+        }
+        else if(rank==30)
+        {
+            System.out.println("rank high");
+        }
+        else
+        {
+            System.out.println("no rank found");
+        }
+
+
+----------------------------------------------------------------------------------Switch Cases in Java-------------------------------------------------
+ System.out.println("Enter Week Number");
+        Scanner scan1=new Scanner(System.in);
+        int week_num=scan1.nextInt();
+        switch (week_num)
+        {
+            case 1:
+                System.out.println("Monday");
+                break;
+            case 2:
+                System.out.println("tuesday");
+                break;
+            case 3:
+                System.out.println("wed");
+                break;
+            case 4:
+                System.out.println("thurs");
+                break;
+            case 5:
+                System.out.println("fri");
+                break;
+            case 6:
+                System.out.println("Sat");
+                break;
+            case 7:
+                System.out.println("Sunday");
+                break;
+            default:
+                System.out.println("Invalid Week Number");
+        }
+
+
+
+------------------------------------------------------------------While and do while loop------------------------------------------------------
+
+int w1=0;
+        while(w1<100)
+        {
+            System.out.println(w1);
+            w1++;
+        }
+int w2=0;
+        do {
+            System.out.println(w2);
+            w2++;
+        } while(w2<100);
+
+//Difference between while and do while loop is that do while loop runs one time and checks the condition.
+
+
+
+----------------------------------------FOR Loop---------------------------------------------
+
+for(int i=0;i<10;i++)
+{
+System.out.println("Hello world");
+}
+
+
+--------------------------------------------------Continue Statement in Java-----------------------------------------
+
+for(int j=0;j<10;j++)
+        {
+            if(j==2)
+            {
+                continue;   // continue is basically used for skipping the current iteration and moving to next iteration without execution 
+            }
+            System.out.println(j);
+        }
+
+Output:
+
+0
+1
+3
+4
+5
+6
+7
+8
+9
+
+-------------------------------------------------------Arrays in Java--------------------------------------------------------------
+
+int [] marks={1,2,3,4}; //Array Initialization
+marks[0]=111;  //array updation
+for(int k=0;k<marks.length;k++)
+{
+  System.out.println(marks[k]);   //printing all the values of an array
+}
+
+String [] a1=new String[20]; //way of declaring an empty array of size 20
+
+
+-----------------------------------------------------------For Each loop-----------------------------------------------------------------------
+
+for(int v1:marks)
+{
+ System.out.println(v1);   //It will store the value of each array index in variable v1 and then it will print them through System.out.println() statement.
+}
+
+------------------------------------Multidimensional Array------------------------
+
+int [][] m2={{1,2,3],{11,12,13}};
+System.out.println(m2[0][1]);   //output will be 2
+
+String [] cars={"suzuki","toyota","hilux"};  //String 1-D array in Java
+        for(String c1:cars)
+        {
+            System.out.println(c1);
+        }
+--------------------------------------------------------Try Catch in Java-------------------------------------------------
+
+String [] cars={"suzuki","toyota","hilux"}; 
+
+try {
+
+            System.out.println(cars[3]); //what try catch is doing is letting the program to execute till end by catching try error in catch block and exceucting the lines after the catch block 
+    } 
+catch (Exception e1) 
+    {
+            System.out.println(e1);
+    }
+        
+System.out.println("Hello world");  //this line will be excecuted regardless of the error 
+
+
+
+---------------------------------------------------------------Functions in Java--------------------------------------------------------
+
+static int sum(int a1,int b1)
+    {
+        return a1+b1;  //written inside Main class and outside main() function (static keyword is written to tell compiler that this func is associated with Main class and not main object
+    } 
+
+
+System.out.println(sum(1,2)); //function sum called inside main() function
+
+
+--------------------------------------------------------------------------OOP in JAVA---------------------------------------------------------------------
+
+click on src and after right click select new folder and name it as Basics (now Basics is your new package)
+
+after clicking on basics folder right click and select new class and name it Main1
+
+After creating a class now write main and then press ctrl+space and now select main method declaration to create main() method
+
+One .java file only contain one public class and you can make n no of different classes in the same file and the name of .java file should be same as your public class
+
+
+
+-----------------------------------Creating a class in Java--------------------------
+
+class Person
+{
+    String name;
+    int age;
+
+public Person()
+{
+count++;
+ System.out.println("Object created");
+ System.out.println("number of times constructor called " + count);
+}
+
+ void walk()
+    {
+        System.out.println(name + " is walking");
+
+    }
+    void talk()
+    {
+        System.out.println(name + " is talking");
+
+    }
+
+void walk(int steps)
+    {
+        System.out.println(name+" walked "+ steps + " steps");
+    }
+
+}
+
+---------------------------creating class objects and assigning values in main method-------------------------------------
+
+public static void main(String[] args) {
+        System.out.println("hello world");
+        Person p1=new Person();
+        p1.name="Jawwad";
+        p1.age=22;
+        System.out.println(p1.name);
+        System.out.println(p1.age);
+        p1.walk();
+        p1.talk();
+    }
+}
+
+Each Class has two things:
+
+1.Properties  int name,age;
+2.Behavior methods such as walking,talking
+
+-----------------------------------------Polymorphism-------------------------------------------------------------------
+
+As you can see we have two methods with the same name which is walk() but one has arguments and one does not so this is called polymorphism (many forms) this is basically compile time polymorphism as in the IDE before running the code you can righ click on the line where method is invoked to find implementation and IDE will highlight the respective function 
+
+-----------------------------Constructor------------------------------------------------------------
+
+Constructor constructs a new object for you 
+If you do not make a constructor by default java will make a constructor for creating an object
+
+ Person p1=new Person();
+
+here new Person() is basically calling the constructor
+
+Default constructor takes no arguments.
+
+
+public Person()
+{
+
+ System.out.println("Object created");    //created inside Person class (it will be invoked everytime whenever a new object is created)
+
+}
+
+
+-----------------------------------------Static keyword--------------------------------------------
+
+It is used to create class properties which are not associated with object.
+
+for example creation of variable :
+
+static int count; //you dont need any object to access this variable/property
+
+System.out.println("Accessing count variable from main method " + Person.count); //like this you can access the count variable
+
+
+-----------------------------------------------------------------Parameterized Constructor-----------------------------------------------
+
+It initializes the class properties at the time of object creation with some vaues provided as arguments
+
+Declaration :
+
+Public Person(int NewAge,int NewName)
+{
+ age=NewAge;
+ new=NewName;
+}
+
+invoking parameterized constructor 
+
+Person p2=new Person(12,"Aslam");
+
+------------------------------------------------------------------------This keyword--------------------------------------------------------------------
+this keyword is used for calling other constructor from one constructor
+
+
+
+public Person()
+{
+
+ System.out.println("Object created");    //created inside Person class (it will be invoked everytime whenever a new object is created)
+
+}
+
+ public Person(int NewAge,String NewName)
+    {
+        this(); // used for calling other constructor of your class from this constructor.As you can see paranthesis are empty which means you are calling default constructor
+        age=NewAge;
+        name=NewName;
+    }
+
+Another way of using this keyword is basically when you dont want to change argument names for the parametrized constructor and you want to assign values to class properties.Example provided below:
+
+public Person(int age,String name)
+    {
+        this(); // used for calling other constructor of your class from this constructor.As you can see paranthesis are empty which means you are calling default constructor
+        this.age=age;  //this.age means this variable belongs to the class property 
+        this.name=name;  //this.name means this variable belongs to the class property
+    }
+
+Basically making these different types of constructor is constructor overloading where you can initialize object properties at the time of object creation
+
+Anuj Bhaiyya OOPs 26:00
+
+----------------------------------------------------------------------------Inheritance------------------------------------------------------------------------
+Class Developer extends Person
+{
+
+Public Developer(int age,String name)
+{
+  super(age,name);
+}
+
+Super Keyword is used to access the properties of Parent Class.
+
+public static void main(String[] args) {
+        System.out.println("hello world");
+        Person p1=new Person();
+        p1.name="Jawwad";
+        p1.age=22;
+        //System.out.println(p1.name);
+        //System.out.println(p1.age);
+        p1.walk(12);
+        //System.out.println("Accessing count variable from main method " + Person.count);///
+        Person p2=new Person(23,"Akram");
+        System.out.println(p2.age+" "+p2.name);
+        dev d1=new dev(22,"Sara");
+        d1.walk();
+    }
+}
+
+
+class dev extends Person{
+    public dev(int age,String name)
+    {
+        super(age,name);
+    }
+    void walk()
+    {
+        System.out.println("hes walking yaaaaar");  //here runtime polymorphism is happening as object will find in runtime whether dev class has walk() function or not and if not found then it will find it in parent class and if not found then it will check with person class's parent for walk() function if found
+    }
+}
+
+
+
+33:41
+
+----------------------------------------------------------------------------------Encapsulation----------------------------------------------------------------------
+
+When you have to perform data hiding for security purpose, then we perform data encapsulation.
+
+Encapsulation is basically binding together the methods and their relevant properties.
+
+If you have created a class and in that class you have some properties and some methods which are using those properties to perform some tasks then you have somemhow achieved encapsulation.
+
+For the purpose of data hiding,we use packages and access modifiers.
+
+You can create a new package by creating a new folder inside src folder.
+
+Naming convention is to keep the first letter of name of package lowercase and to apply camelCase convention.
+
+Then a class is created inside a package. (.java file)
+
+To manage large Java Projects, you can create packages and subpackages. (folders within a folder)
+
+public void DoWork()
+{
+System.out.println("Working now");
+}
+
+here the public access modifier means that you can access the method from any package by creating that class's object.
+
+Let's say we have two packages p1 and p2 and this DoWork() method is in package p1 but when you have declared it public then you can access it from package p2's any class.
+
+
+void DoWork()
+{
+System.out.println("Working now");
+}
+
+In the above method, the public access modifier is not present and by default this method will now only be available in the package where this method exists and its subpackages.
+
+This is how encapsulation is achieved by the package without the use of access modifier.(as mentioned in the previous line)
+
+private void DoWork()
+{
+System.out.println("Working now");
+}
+
+If we declare this method as private then we cannot access this method from outside the class where this package exists.
+
+Protected keyword is used when we want any method or property to be accessed only by its child classes.
+
+It does not matter its children are in other packages or not,after using protected keyword those child classes can access those properties or methods with ease.
+
+Lets Suppose you have one class named as Laptop where you have properties such as name,price and you dont want them to be manipulated directly without any authentication
+
+class Laptop
+{
+private int price;
+int name;
+ public void setPrice(int price)
+    {
+       //add authentication code here before updating the price value such as checks such as password string etc.
+       this.price=price;
+    }
+}
+
+So you will make that price property private and you will use setter to set the price or update the price (keep in mind to keep the setter and getter always public)
+
+public int getPrice()
+{
+ return price;
+}
+
+Through getter() and setter() you are not directly accessing the properties and you are achieving encapsulation in terms of data hiding.
+
+
+
+-----------------------------------------------------------------------------ABSTRACTION------------------------------------------------------------------------------------------
+
+Abstraction is also an important concept like data hiding but it is different from encapsulation as we are hiding the irrelevant details from the user just to hide the complexity of the system.
+
+For example I told one kid to switch off the light by pressing the button and i will tell him/her the whole procedure that when you press the button the circuit breaks and electricity stops and the kid says i dont want to know such intricate details.
+
+We use abstraction to hide irrelevant details from the user as user only provide input and gets output.
+
+The more we can make a system abstract, the more it is better.
+
+We can achieve abstraction through Abstract keyword and Interfaces.
+
+---------------------------------------------------------------------------abstract Keyword--------------------------------------------------------------------
+
+abstract class Car  //this class Car is basically a concept and not a proper implementation
+{
+int price;
+int brand;
+void start()
+{
+System.out.println("Car Started");
+}
+}
+
+As we have used abstract keyword before the class Car this means that you cannot create an object of class Car or we can say cannot instantiate it.
+
+
+abstract class Car  //this class Car is basically a concept and not a proper implementation
+{
+int price;
+int brand;
+absract void start();
+}
+
+Now in the above example, we have declared start() method as abstract which means you have provide its implementation in the class which is extending the Car class.
+
+class Audi extends Car
+{
+
+ void start()
+{
+System.out.println("Boom Boom");
+}
+}
+
+class BMW extends Car
+{
+
+ void start()
+{
+System.out.println("Dhish Dhish Boom Boom Dhish");
+}
+}
+
+Now you can instantiate (create objects) of classes which are implementing the start function of Car class which was a concept and Audi and BMW are actual models.
+ 
+
+Audi a1=new Audi();  //like this you can create objects
+a1.start();
+ 
+
+If you have made some function abstract then it is mandatory to make its class abstract also 
+
+Normal class cannot contain abstract methods.
+
+--------------------------------------------------------------------Difference Between Abstract keyword and Interfaces-----------------------------------------------
+
+Interfaces are used extensively and it is also used achieve abstraction.
+
+All the methods inside the interface are by default public and abstract.
+
+Abstract class can contain concrete methods (methods with implementation) but in interface it is not at all allowed and it will give you the error.
+
+Implements keyword is used by a class providing implementation for interface methods.
+
+interface car
+{
+ void start();
+}
+
+class A1 implements car
+{
+ void start()
+{
+ System.out.println("Hello world");
+}
+}
+
+Java Does not Allow multiple inheritance which means one class cannot have multiple parents.
+
+One class  can have multilevel parents but cannot have multiple immediate parents.
+
+In order to tackle this limitation we use interfaces.
+
+
+class A1 implements car,person
+{
+ public void start()
+{
+ System.out.println("Hello world");
+}
+
+public void walk()
+{
+ System.out.println("Hello walk world");
+}
+}
+
+Keep in mind to keep the implementation methods of interface public as written above.
+
+
+In Interfaces you cannot keep concrete methods.
+
+
+
+
+
+
+---------------------------------------------------------------------Final Keyword-------------------------------------------------------------------------------------------------------------------------------
+
+
+If you don't want other classes to inherit from a class, use the final keyword:
+
+If you try to access a final class, Java will generate an error:
+
+final class Vehicle {
+  ...
+}
+
+class truck extends Vehicle {
+  ...
+}
+
+Main.java:9: error: cannot inherit from final Vehicle
+
+
+
+
+
+
+
+Use public in constructor,getter setter and interface implementation methods
+
+
+
+
+ CGI Constructors,Getter Setters, Interface implementation of methods should be public
+----------------------------------------------------------------------------------------VIDEO SOURCE: ANUJ BHAIYYA OOP------------------------------------------------------------
+
+
+
+---------------------------------------------------------------------------------------JAVA Collection Framework--------------------------------------------------------------------
+
+In collection framework there are three interfaces:
+
+1. Collection interface.
+2. Map Interface.
+3. Iterator interface.
+
+Each interface also have their children interfaces which segregate them according to their data structures and properties:
+
+Collection -> List,Set,Queue (children interfaces)
+
+---------------------------------------------------------------------List Interface--------------------------------------------------
+
+List interface contains all those data strcutures in which you want to store values in a contiguous fashion.
+
+ARRAY LIST CLASS:
+
+The ArrayList dynamically increases the size which not happens in case of normal array and when it reaches its previous capacity which is 10 then it increases its size by creating a new ArrayList of Size=n+n/2 +1 and then copies all the elements from previous array and pastes them into new array and dumps the previous array.
+
+
+ArrayList<String> arr1=new ArrayList<>();
+arr1.add("Aslam");
+
+ArrayList<String> arr1=new ArrayList<>();
+
+arr1.add("Alis");
+arr1.add("Alif");
+arr1.add("Alig");
+arr1.add("Alit");
+
+arr1.add(1,"At");  //This is basically method overriding of add() function as we have given arguments of index and element and it replaces the previous element at that index with new element.
+
+
+System.out.println(arr1);
+
+ArrayList<String> arr2=new ArrayList<>();
+
+arr2.add("Hamza");
+
+arr2.addAll(arr1);   //basically this method addall() takes argument of list to be appended and appends the provided list to the ArrayList calling the method which is arr2 in this case.
+
+System.out.println(arr2);     //Output: [Hamza, Alis, At, Alif, Alig, Alit]
+
+--------------------------------------------------------get() method----------------------------------------------------------
+
+System.out.println(arr2.get(2));   //where this get() method takes argument of index  which you want to get element from
+
+To comment out the selected code segment select the code and ctrl+shift+/ to comment out the whole selected code.
+
+------------------------------------------------------------remove() method------------------------------------------------------------
+
+//output: before removal from ArrayList [Hamza, Alis, At, Alif, Alig, Alit]
+
+
+arr2.remove(1);  //takes index as argument and removes element from that index  
+System.out.println(arr2);   //output: [Hamza, At, Alif, Alig, Alit]
+
+arr2.remove(String.valueOf("Alit"));   //method overloading of remove() method which takes datatype and specific value to be removed from ArrayList 
+System.out.println(arr2);    //output:  [Hamza, At, Alif, Alig] after removal of "Alit" from arr2
+
+------------------------------------------------------------clear() method---------------------------------------------------------------------------------
+
+arr2.clear();  //clears all the elements from ArrayList 
+System.out.println(arr2);
+
+
+-----------------------------------------------------------------set() method--------------------------------------------------------------------------------------
+This Method is used to update value at a specific index 
+
+arr2.set(0,"AAAAAAA");
+System.out.println(arr2);       // output: [AAAAAAA, At, Alif, Alig]
+
+-------------------------------------------------------------------------contains() method---------------------------------------------
+
+It is used to check whether the element given as argument to function is present or not (returns true or false)
+
+System.out.println(arr2.contains("Alif"));   OUTPUT: true
+
+------------------------------------------------------------------------------size() method-------------------------------------------------
+
+Returns the number of elements present in the list
+
+System.out.println(arr2.size());   //Output: 4
+
+-----------------------------------------------------------------------Iterating through the ArrayList Elements--------------------------------------
+
+ for(String st:arr2)  //this is basically a foreach loop where st is the variable which will store the value in each iteration
+         {
+             System.out.print(st+"\t");
+         }
+
+OR another way is:
+
+for(int i=0;i<arr2.size();i++)
+{
+System.out.println(arr2.get(i));
+}
+
+
+-----------------------------------------------------------------------------------Stack------------------------------------------------------------------------------
+
+push()
+peek()
+pop()
+21:21
+
+
+
+
+
+
