@@ -1,0 +1,69 @@
+Node.js: Javascript which executes on the server.
+
+In node.js document object is not available as well as localstorage api is not available.
+
+Node.js is a runtime environment for js which runs on server.
+
+It runs on asynchronous nonblocking i/o model.
+
+create a file of .js extension and then write js code and then in terminal write node filename to run the code.
+
+A single thread can manage multiple connections which allows asynchronous nonblocking i/o model.
+
+To check node.js installation/version wrtie in terminal : node --version
+
+To check npm installation/version wrtie in terminal : npm --version
+
+npm stands for node package manager which helps to manage node.js packages and their installation
+
+Write in terminal npm init to create package.json file which contains all info regarding your project
+
+write in terminal npm install express --save to install express package.
+
+Before npm version 5 if we want to save a package as dependency then we used to write --save but now it is saved as dependency in default manner in npm newer versions
+
+node_modules folder will be created after install command.
+
+Whenever we send our project to someone or upload it on github we delete the node_modules folder as it takes a lot of space and it can be installed by npm install command
+
+In node_modules folder, all dependencies from internet comes here after downloading and we can use them.
+
+To globally install a package in any computer write in terminal npm install -g nodemon (where nodemon is the package name) 
+
+After installing a package globally we can use that package in any project on our pc in which we want.
+
+Nodemon is a command-line tool that helps with the speedy development of Node. js applications. 
+
+It monitors your project directory and automatically restarts your node application when it detects any changes. 
+
+This means that you do not have to stop and restart your applications in order for your changes to take effect.
+
+20:00
+
+----------------------------------------------------------DEV Dependency------------------------------------------------
+
+There are some dependencies that we want to use at the time of development only and they are called dev dependencies.
+
+npm install --save-dev nodemon
+
+To uninstall the package simply write in terminal npm uninstall nodemon (here nodemon is the package name)
+
+Package.json contains packages which you have added as dependency and package-lock.json 
+
+There are some packages which are dependent on some other packages and a dependency tree is created which is stored in package-lock.json
+
+fs module
+
+os module
+
+url module
+
+simple js export import vs ES import export
+
+
+Event Emitter Class for actions on event 
+
+Http server using node js
+
+Express JS code helps in creating servers with ease.
+
