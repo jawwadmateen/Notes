@@ -1,0 +1,84 @@
+
+----------------------------------------------------------------------------CREATE-----------------------------------------------------------------------
+use dbname // to create database/swtich to db if it exists
+
+show dbs //to check present databases
+
+db.createCollection("inventory") //to create a collection inside a db named inventory
+
+db.inventory.insertOne(
+   { item: "canvas", qty: 100, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } }              //to insert one document
+)
+
+
+
+db.inventory.insertMany(
+   [{ item: "canvas", qty: 1, tags: ["cotton"], size: { h: 28, w: 35.5, uom: "cm" } },
+    { item: "canvas", qty: 100, tags: ["silk"], size: { h: 28, w: 3.5, uom: "cm" } },
+    { item: "canvas", qty: 10, tags: ["gold"], size: { h: 28, w: 355.5, uom: "cm" } },
+    { item: "canvas", qty: 1000, tags: ["copper"], size: { h: 28, w: 5.5, uom: "cm" } }]
+)                                                                                               //to insert multiple document inside a collection
+
+
+--------------------------------------------------------------------------------------------------READ---------------------------------------------------------------
+
+db.inventory.find()      //to read all documents inside a collection (fetch all documents)
+
+db.inventory.find({qty:19})  //find all documents where qty is 19 
+
+db.inventory.find( { tags: { $in: [ "A", "gold" ] } } )     // here in works as include just like sql as we are finding document where the tags field has any of the value present in the array provided
+
+db.inventory.find( { tags: "cotton", qty: { $lt: 10 } } )  //here $lt is less than this whole is a AND command as we dont explicitly write AND .
+
+The above command means to fetch documents where tags==cotton AND qty<10
+
+db.inventory.find( { $or: [ { tags: "gold" }, { qty: { $lt: 100 } } ] }  //the OR command which means tags==gold or qty<100
+
+db.inventory.findOne( { $or: [ { tags: "gold" }, { qty: { $lt: 100 } } ] }  //the OR command which means tags==gold or qty<100   //one document will be fetched and output will be a document not an array
+
+------------------------------------------------------------------------------------------------UPDATE------------------------------------------------------------------------------
+
+db.inventory.updateOne(                                                   //Update command where document having tags==silk is updated here qty is se to 44 and size.h is set to P
+   { tags: "silk" },                                                      // Last modified date is added and updated if that entry exists in the document
+   {
+     $set: { "qty": "44", "size.h": "P" },
+     $currentDate: { lastModified: true }
+   }
+)
+
+
+db.inventory.updateMany(                                                       //to update all commands which satisfies the condition
+   { qty:{$lt:10 }},
+   {
+     $set: { "qty": "44", "size.h": "P" },
+     $currentDate: { lastModified: true }
+   }
+)
+
+
+-------------------------------------------------------------------------------------------------DELETE--------------------------------------------------------------------------------
+
+
+db.inventory.deleteMany({})  //Deletes all documents from a collection
+
+
+db.inventory.deleteMany({ status : "A" })     //Deletes all documents having status==A
+
+db.inventory.deleteOne({ status : "A" })     //Deletes first documents having status==A
+
+db.dropDatabase();  //To drop the current database which you are currently using
+
+---------------------------------------------------------------------------------------------Sort and limit Data-------------------------------------------------------------------
+
+db.inventory.find().limit(1)   //limit(1) gives you first document 
+
+db.inventory.find().skip(1)   //skip(1) skips first document and gives you the remaining documents
+
+db.inventory.find().sort({qty:1})  //sorts documents according to quantity in ascending order
+
+db.inventory.find().sort({qty:-1})   //sorts documents according to quantity in descending order
+
+ 
+//Explore more operators like $lt from mongodb website
+
+//Also read aggregation pipeline from mongodb documentation (It is somehow similar to aggregate function and group by in SQL)
